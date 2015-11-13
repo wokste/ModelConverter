@@ -1,0 +1,7 @@
+*.suo
+ModelConverter/bin/*
+ModelConverter/obj/*
+*[Dd]ebug/
+*[Dd]ebugPublic/
+*[Rr]elease/
+*[Rr]eleases/
