@@ -63,7 +63,7 @@ namespace ModelConverter.FileSystem {
 		}
 
 		private static string formatNr(double nr) {
-			return ((nr >= 0) ? "+" : "-") + nr.ToString("00000.000000", FileIOHelper.nfi);
+			return ((nr >= 0) ? "+" : "-") + Math.Abs(nr).ToString("00000.000000", FileIOHelper.nfi);
 		}
 
 		internal static Model load(StreamReader r) {
