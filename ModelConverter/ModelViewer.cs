@@ -86,5 +86,9 @@ namespace ModelConverter {
 		private void tbSnap_Scroll(object sender, EventArgs e) {
 			modelToolChain.SnapSize = Math.Pow(2, tbSnap.Value);
 		}
+
+		private void cbInvert_CheckedChanged(object sender, EventArgs e) {
+			modelToolChain.ShouldInvert = cbInvert.Checked;
+		}
 	}
 }

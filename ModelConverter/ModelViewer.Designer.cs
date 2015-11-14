@@ -31,6 +31,7 @@
 			this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.cbInvert = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.tbSnap)).BeginInit();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -87,7 +88,7 @@
 			// 
 			this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
 			this.loadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.loadToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.loadToolStripMenuItem.Text = "Open";
 			this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
 			// 
@@ -95,7 +96,7 @@
 			// 
 			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
 			this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.saveToolStripMenuItem.Text = "Save";
 			this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
 			// 
@@ -103,15 +104,27 @@
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
 			this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			// 
+			// cbInvert
+			// 
+			this.cbInvert.AutoSize = true;
+			this.cbInvert.Location = new System.Drawing.Point(12, 81);
+			this.cbInvert.Name = "cbInvert";
+			this.cbInvert.Size = new System.Drawing.Size(135, 17);
+			this.cbInvert.TabIndex = 11;
+			this.cbInvert.Text = "invert polygon direction";
+			this.cbInvert.UseVisualStyleBackColor = true;
+			this.cbInvert.CheckedChanged += new System.EventHandler(this.cbInvert_CheckedChanged);
 			// 
 			// ModelViewer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 262);
+			this.Controls.Add(this.cbInvert);
 			this.Controls.Add(this.menuStrip1);
 			this.Controls.Add(this.lbSnap);
 			this.Controls.Add(this.tbSnap);
@@ -136,5 +149,6 @@
 		private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+		private System.Windows.Forms.CheckBox cbInvert;
 	}
 }

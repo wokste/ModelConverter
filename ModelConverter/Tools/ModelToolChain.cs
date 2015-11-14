@@ -35,11 +35,20 @@ namespace ModelConverter.Tools {
 			}
 		}
 
-		private bool _shouldSnap = true;
+		private bool _shouldSnap = false;
 		public bool ShouldSnap {
 			get { return _shouldSnap; }
 			set {
 				_shouldSnap = value;
+				Refresh();
+			}
+		}
+
+		private bool _shouldInvert = false;
+		public bool ShouldInvert {
+			get { return _shouldInvert; }
+			set {
+				_shouldInvert = value;
 				Refresh();
 			}
 		}
@@ -51,6 +60,9 @@ namespace ModelConverter.Tools {
 
 			if (ShouldSnap)
 				SnapTool.snap(_finalModel, SnapSize);
+
+			if (ShouldInvert)
+				InvertTool.Apply(_finalModel);
 
 			if (onModelChange != null)
 				onModelChange();
